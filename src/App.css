@@ -7,6 +7,14 @@ body {
   background-color: orange;
 }
 
+#container {
+  padding: 0 15px 30px;
+}
+
+.contentArea {
+  margin: 80px 0 0 0;
+}
+
 .notes {
   font-size: 14px;
   font-weight: bold;
@@ -17,6 +25,16 @@ body {
   padding: 0.44em 0 0 0;
 }
 
+#leftArea {
+  padding: 0 15px;
+  float: left;
+}
+
+#textArea {
+  padding: 20px 0 0 0;
+  margin: 0 0 10px 0;
+}
+
 #demoAnalysis {
   margin: 20px 0;
   padding: 6px 12px;
@@ -25,4 +43,40 @@ body {
 .table {
   font-size: 12px;
   margin: 50px 0 20px;
+}
+
+#rightArea {
+  float: left;
+}
+
+.fact-container {
+  margin-top: 10px;
+}
+
+#factBox {
+  border: 1px solid black;
+  padding: 0 20px 5px;
+  margin: 40px 10px 0;
+}
+
+#factTitle {
+  border-bottom: 10px solid black;
+}
+
+.calories {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+#factTable {
+  width: 100%;
+}
+
+#small-info {
+  font-size: 11px;
+  border-top: 5px solid black;
+}
+
+.factRows {
+  border-top: 2px solid black;
 }
