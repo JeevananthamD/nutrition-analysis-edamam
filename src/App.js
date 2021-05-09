@@ -1,14 +1,13 @@
-import { Component } from 'react';
+import React,{ Component } from 'react';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-          <div className="container bg-success col-lg-9 col-xl-8" id="container">
+          <div className="container col-lg-9 col-xl-8" id="container">
             <div className="row">
-              
-                <div className="contentArea col-md-12 bg-white ">
+                <div className="col-md-12 bg-white ">
                   <div className="row">
                     <div className="col-md-12">
                       <h1 className="text-center title">Nutrition Analysis API Demo</h1>
@@ -66,36 +65,85 @@ class App extends Component {
                         <div className="fact-container">
                           <section id="factBox">
                             <p className="h2 m-0 pt-3" id="factTitle">Nutrition Facts</p>
-                            <p>
                             <table id="factTable">
                               <thead>
                                 <tr>
-                                  <th>Amount Per Serving</th>
+                                  <th className="text-start">Amount Per Serving</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
                                   <th className="calories text-start">Calories</th>
-                                  <td>1774</td>
+                                  <td className="fw-bold">1774</td>
                                 </tr>
-                                <tr id="small-info">
-                                  <th></th>
-                                  <td>% Daily Value</td>
+                                <tr>
+                                  <td className="small-info thickBorder text-end fw-bold" colSpan="3">% Daily Value*</td>
                                 </tr>
-                                <tr className="factRows">
-                                  <th>Total Fat 18.3 g</th>
-                                  <td>28%</td>
+                                <tr>
+                                  <th className="factItems fw-bold">Total Fat 18.3 g</th>
+                                  <td className="factPercentage">28%</td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems">Saturated Fat</th>
+                                  <td className="factPercentage">10%</td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems">Trans Fat</th>
+                                  <td className="factPercentage"></td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems fw-bold">Cholesterol</th>
+                                  <td className="factPercentage"></td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems fw-bold">Sodium</th>
+                                  <td className="factPercentage"></td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems fw-bold">Total Carbohydrate</th>
+                                  <td className="factPercentage"></td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems">Dietary Fiber</th>
+                                  <td className="factPercentage">138%</td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems">Total Sugars</th>
+                                  <td className="factPercentage"></td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems">Includes - Added Sugars</th>
+                                  <td className="factPercentage"></td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems fw-bold">Protein</th>
+                                  <td className="factPercentage"></td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems">Vitamin D</th>
+                                  <td className="factPercentage"></td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems">Calcium</th>
+                                  <td className="factPercentage"></td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems">Iron</th>
+                                  <td className="factPercentage"></td>
+                                </tr>
+                                <tr>
+                                  <th className="factItems">Potassium</th>
+                                  <td className="factPercentage"></td>
                                 </tr>
                               </tbody>
                             </table>
-                            </p>
+                            <p className="small-info mt-3">*Percent Daily Values are based on a 2000 calorie diet</p>
                           </section>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              
             </div>
           </div>
       </div>

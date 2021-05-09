@@ -4,15 +4,11 @@
 }
 
 body {
-  background-color: orange;
+  background-image: url("vegetable-bg.jpg");
 }
 
 #container {
-  padding: 0 15px 30px;
-}
-
-.contentArea {
-  margin: 80px 0 0 0;
+  padding: 30px 15px;
 }
 
 .notes {
@@ -26,7 +22,7 @@ body {
 }
 
 #leftArea {
-  padding: 0 15px;
+  padding: 0 20px;
   float: left;
 }
 
@@ -50,7 +46,7 @@ body {
 }
 
 .fact-container {
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 #factBox {
@@ -72,11 +68,24 @@ body {
   width: 100%;
 }
 
-#small-info {
+.small-info {
   font-size: 11px;
+}
+
+.thickBorder {
   border-top: 5px solid black;
 }
 
-.factRows {
-  border-top: 2px solid black;
+.factItems {
+  border-top: 1px solid black;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.factPercentage {
+  border-top: 1px solid black;
+  text-align: right;
+  font-size: 14px;
+  font-weight: bold;
 }
