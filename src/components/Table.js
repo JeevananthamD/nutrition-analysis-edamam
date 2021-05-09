@@ -1,6 +1,7 @@
 import React from "react";
 
-const Table = () => {
+const Table = ({data}) => {
+    
     return(
         <table className="table">
             <thead>
@@ -17,7 +18,7 @@ const Table = () => {
                     <th>1</th>
                     <td>cup</td>
                     <td>rice</td>
-                    <td>702 kcal</td>
+                    <td>{data.calories} kcal</td>
                     <td>195 g</td>
                 </tr>
                 <tr>

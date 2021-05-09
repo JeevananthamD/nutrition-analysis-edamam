@@ -3,19 +3,44 @@ import './App.css';
 import TextArea from "./components/TextArea";
 import Buttons from "./components/Buttons";
 import Table from "./components/Table";
-import FactBox from "./components/FactBox";
+import FactCard from "./components/FactCard";
+import ErrorMessage from './components/ErrorMessage';
 
 class App extends Component {
   
   constructor() {
     super();
     this.input = "";
+    this.error = undefined;
+    this.state = {
+      data: undefined
+    }
   }
 
   typing = e => {
     this.input = e.target.value;
-    console.log(this.input);
   }
+
+  analyze = () => {
+    let link = "https://api.edamam.com/api/nutrition-data?app_id=721b26e3&app_key=d178b89f35e9ac6b0c980fac2e471851&ingr=" + this.input;
+    this.getData(link);
+  }
+
+  async getData(link) {
+    try {
+      let rawdata = await fetch(link);
+      let data = await rawdata.json();
+      this.error = await data.error;
+      this.setState({data});
+    } catch (error) {
+      alert("The link is broken");
+      window.location.reload();
+    }
+  }
+
+  newRecipe = e => {
+    window.location.reload();
+  } 
 
   render() {
     return (
@@ -36,16 +61,17 @@ class App extends Component {
                       </p>
                       <div className="col-12 col-sm-7 " id="leftArea">
                         <TextArea typing={this.typing}/>
-                        <Buttons/>
-                        <div>
+                        <Buttons analyze={this.analyze} newRecipe={this.newRecipe}/>
+                        {(this.error)?<ErrorMessage/>:""}
+                        <div className="demo-results">
                           <div className="col-12">
-                            <Table/>
+                            {(this.state.data)?<Table data={this.state.data}/>:""}
                           </div>
                         </div>
                       </div>
                       <div id="rightArea" className="col-12 col-sm-5 ">
                         <div className="fact-container">
-                            <FactBox/>
+                            {(this.state.data)?<FactCard data={this.state.data}/>:""}
                         </div>
                       </div>
                     </div>

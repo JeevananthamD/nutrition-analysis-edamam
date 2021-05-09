@@ -5,6 +5,7 @@
 
 body {
   background-image: url("vegetable-bg.jpg");
+  background-size: cover;
 }
 
 #container {
@@ -31,6 +32,10 @@ body {
   margin: 0 0 10px 0;
 }
 
+.error {
+  text-align: justify;
+}
+
 #demoAnalysis {
   margin: 20px 0;
   padding: 6px 12px;
@@ -49,7 +54,7 @@ body {
   margin: 10px 0;
 }
 
-#factBox {
+#factCard {
   border: 1px solid black;
   padding: 0 20px 5px;
   margin: 40px 10px 0;
