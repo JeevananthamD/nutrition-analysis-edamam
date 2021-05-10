@@ -10,6 +10,8 @@ class App extends Component {
   
   constructor() {
     super();
+    this.app_id = "721b26e3";
+    this.app_key = "d178b89f35e9ac6b0c980fac2e471851";
     this.input = "";
     this.error = undefined;
     this.state = {
@@ -22,7 +24,7 @@ class App extends Component {
   }
 
   analyze = () => {
-    let link = "https://api.edamam.com/api/nutrition-data?app_id=721b26e3&app_key=d178b89f35e9ac6b0c980fac2e471851&ingr=" + this.input;
+    let link = `https://api.edamam.com/api/nutrition-data?app_id=${this.app_id}&app_key=${this.app_key}&ingr=${this.input}`;
     this.getData(link);
   }
 
@@ -61,7 +63,7 @@ class App extends Component {
                       </p>
                       <div className="col-12 col-sm-7 " id="leftArea">
                         <TextArea typing={this.typing}/>
-                        <Buttons analyze={this.analyze} newRecipe={this.newRecipe}/>
+                        <Buttons analyze={this.analyze} newRecipe={this.newRecipe} data={this.state.data}/>
                         {(this.error)?<ErrorMessage/>:""}
                         <div className="demo-results">
                           <div className="col-12">

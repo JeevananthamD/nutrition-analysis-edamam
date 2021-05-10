@@ -6,19 +6,19 @@ const FactCard = ({data}) => {
     let totalNutrients = data.totalNutrients;
     let totalDaily = data.totalDaily;
     let items = (totalNutrients)?
-        {Total_Fat: totalNutrients.FAT? totalNutrients.FAT.quantity + " " + totalNutrients.FAT.unit: "-",
-        Sat_Fat: totalNutrients.FASAT? totalNutrients.FASAT.quantity + " " + totalNutrients.FASAT.unit: "-",
-        Trans_Fat: totalNutrients.FATRN? totalNutrients.FATRN.quantity + " " + totalNutrients.FATRN.unit: "-",
-        Cholesterol: totalNutrients.CHOLE? totalNutrients.CHOLE.quantity + " " + totalNutrients.CHOLE.unit: "-",
-        Sodium: totalNutrients.NA? totalNutrients.NA.quantity + " " + totalNutrients.NA.unit: "-",
-        Total_Carbs: totalNutrients.CHOCDF? totalNutrients.CHOCDF.quantity + " " + totalNutrients.CHOCDF.unit: "-",
-        Dietary_Fiber: totalNutrients.FIBTG? totalNutrients.FIBTG.quantity + " " + totalNutrients.FIBTG.unit: "-",
-        Total_Sugars: totalNutrients.SUGAR? totalNutrients.SUGAR.quantity + " " + totalNutrients.SUGAR.unit: "-",
-        Protein: totalNutrients.PROCNT? totalNutrients.PROCNT.quantity + " " + totalNutrients.PROCNT.unit: "-",
-        Vitamin_D: totalNutrients.VITD? totalNutrients.VITD.quantity + " " + totalNutrients.VITD.unit: "-",
-        Calcium: totalNutrients.CA? totalNutrients.CA.quantity + " " + totalNutrients.CA.unit: "-",
-        Iron: totalNutrients.FE? totalNutrients.FE.quantity + " " + totalNutrients.FE.unit: "-",
-        Potassium: totalNutrients.K? totalNutrients.K.quantity + " " + totalNutrients.K.unit: "-"}
+        {Total_Fat: totalNutrients.FAT? totalNutrients.FAT.quantity.toFixed(1) + " " + totalNutrients.FAT.unit: "-",
+        Sat_Fat: totalNutrients.FASAT? totalNutrients.FASAT.quantity.toFixed(1) + " " + totalNutrients.FASAT.unit: "-",
+        Trans_Fat: totalNutrients.FATRN? totalNutrients.FATRN.quantity.toFixed(1) + " " + totalNutrients.FATRN.unit: "-",
+        Cholesterol: totalNutrients.CHOLE? totalNutrients.CHOLE.quantity.toFixed(1) + " " + totalNutrients.CHOLE.unit: "-",
+        Sodium: totalNutrients.NA? totalNutrients.NA.quantity.toFixed(1) + " " + totalNutrients.NA.unit: "-",
+        Total_Carbs: totalNutrients.CHOCDF? totalNutrients.CHOCDF.quantity.toFixed(1) + " " + totalNutrients.CHOCDF.unit: "-",
+        Dietary_Fiber: totalNutrients.FIBTG? totalNutrients.FIBTG.quantity.toFixed(1) + " " + totalNutrients.FIBTG.unit: "-",
+        Total_Sugars: totalNutrients.SUGAR? totalNutrients.SUGAR.quantity.toFixed(1) + " " + totalNutrients.SUGAR.unit: "-",
+        Protein: totalNutrients.PROCNT? totalNutrients.PROCNT.quantity.toFixed(1) + " " + totalNutrients.PROCNT.unit: "-",
+        Vitamin_D: totalNutrients.VITD? totalNutrients.VITD.quantity.toFixed(1) + " " + totalNutrients.VITD.unit: "-",
+        Calcium: totalNutrients.CA? totalNutrients.CA.quantity.toFixed(1) + " " + totalNutrients.CA.unit: "-",
+        Iron: totalNutrients.FE? totalNutrients.FE.quantity.toFixed(1) + " " + totalNutrients.FE.unit: "-",
+        Potassium: totalNutrients.K? totalNutrients.K.quantity.toFixed(1) + " " + totalNutrients.K.unit: "-"}
         :
         {Total_Fat: "-",
         Sat_Fat: "-",
