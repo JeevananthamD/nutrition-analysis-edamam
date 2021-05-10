@@ -14,7 +14,7 @@ const Table = ({data}) => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                {/* <tr>
                     <th>1</th>
                     <td>cup</td>
                     <td>rice</td>
@@ -27,7 +27,7 @@ const Table = ({data}) => {
                     <td>chickpease</td>
                     <td>1071.6 kcal</td>
                     <td>283.5 g</td>
-                </tr>
+                </tr> */}
             </tbody>
         </table>
     );

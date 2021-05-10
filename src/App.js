@@ -54,7 +54,6 @@ class App extends Component {
   } 
 
   render() {
-    console.log(this.state.data);
     return (
       <div className="container-fluid">
           <div className="container col-lg-9 col-xl-8" id="container">
