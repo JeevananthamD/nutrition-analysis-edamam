@@ -1,7 +1,7 @@
 import React from "react";
 
 const FactCard = ({data}) => {
-    console.log(data);
+    // console.log(data);
     let Calories = (data.calories)?data.calories:0;
     let totalNutrients = data.totalNutrients;
     let totalDaily = data.totalDaily;

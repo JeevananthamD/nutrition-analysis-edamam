@@ -24,20 +24,29 @@ class App extends Component {
   }
 
   analyze = () => {
-    let link = `https://api.edamam.com/api/nutrition-data?app_id=${this.app_id}&app_key=${this.app_key}&ingr=${this.input}`;
-    this.getData(link);
+    let input_arr = this.input.split("\n");
+    this.error = undefined;
+    this.fetchData(input_arr);
   }
 
-  async getData(link) {
-    try {
-      let rawdata = await fetch(link);
-      let data = await rawdata.json();
-      this.error = await data.error;
-      this.setState({data});
-    } catch (error) {
-      alert("The link is broken");
-      window.location.reload();
-    }
+  fetchData(input_arr) {
+    Promise.all(input_arr.map(element => {
+        return(fetch(`https://api.edamam.com/api/nutrition-data?app_id=${this.app_id}&app_key=${this.app_key}&ingr=${element}`)
+        .then(response => response.json())
+        .then((single_data) => {
+          this.error = (this.error)? "bad_request": single_data.error;
+          return single_data;
+        })
+        .catch(error => {
+          alert(error);
+          window.location.reload();
+        }));
+    }))
+    .then(data => {
+      if(data[0]) {
+        this.setState({data});
+      }
+    });
   }
 
   newRecipe = e => {
@@ -45,6 +54,7 @@ class App extends Component {
   } 
 
   render() {
+    console.log(this.state.data);
     return (
       <div className="container-fluid">
           <div className="container col-lg-9 col-xl-8" id="container">
