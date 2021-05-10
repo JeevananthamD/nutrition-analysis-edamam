@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/nutrition-analysis-edamam/static/css/main.a0f1ddfb.chunk.css",
+    "main.js": "/nutrition-analysis-edamam/static/js/main.83b0d357.chunk.js",
+    "main.js.map": "/nutrition-analysis-edamam/static/js/main.83b0d357.chunk.js.map",
+    "runtime-main.js": "/nutrition-analysis-edamam/static/js/runtime-main.802cf0f9.js",
+    "runtime-main.js.map": "/nutrition-analysis-edamam/static/js/runtime-main.802cf0f9.js.map",
+    "static/js/2.06d7f71a.chunk.js": "/nutrition-analysis-edamam/static/js/2.06d7f71a.chunk.js",
+    "static/js/2.06d7f71a.chunk.js.map": "/nutrition-analysis-edamam/static/js/2.06d7f71a.chunk.js.map",
+    "static/js/3.7c917d4f.chunk.js": "/nutrition-analysis-edamam/static/js/3.7c917d4f.chunk.js",
+    "static/js/3.7c917d4f.chunk.js.map": "/nutrition-analysis-edamam/static/js/3.7c917d4f.chunk.js.map",
+    "index.html": "/nutrition-analysis-edamam/index.html",
+    "static/css/main.a0f1ddfb.chunk.css.map": "/nutrition-analysis-edamam/static/css/main.a0f1ddfb.chunk.css.map",
+    "static/js/2.06d7f71a.chunk.js.LICENSE.txt": "/nutrition-analysis-edamam/static/js/2.06d7f71a.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/nutrition-analysis-edamam/static/media/vegetable-bg.e24703cc.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.802cf0f9.js",
+    "static/js/2.06d7f71a.chunk.js",
+    "static/css/main.a0f1ddfb.chunk.css",
+    "static/js/main.83b0d357.chunk.js"
+  ]
+}
