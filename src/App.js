@@ -13,6 +13,7 @@ class App extends Component {
     this.app_id = "721b26e3";
     this.app_key = "d178b89f35e9ac6b0c980fac2e471851";
     this.input = "";
+    this.input_arr = [];
     this.error = undefined;
     this.state = {
       data: undefined
@@ -24,13 +25,13 @@ class App extends Component {
   }
 
   analyze = () => {
-    let input_arr = this.input.split("\n");
+    this.input_arr = this.input.split("\n");
     this.error = undefined;
-    this.fetchData(input_arr);
+    this.fetchData();
   }
 
-  fetchData(input_arr) {
-    Promise.all(input_arr.map(element => {
+  fetchData() {
+    Promise.all(this.input_arr.map(element => {
         return(fetch(`https://api.edamam.com/api/nutrition-data?app_id=${this.app_id}&app_key=${this.app_key}&ingr=${element}`)
         .then(response => response.json())
         .then((single_data) => {
@@ -76,7 +77,7 @@ class App extends Component {
                         {(this.error)?<ErrorMessage/>:""}
                         <div className="demo-results">
                           <div className="col-12">
-                            {(this.state.data)?<Table data={this.state.data}/>:""}
+                            {(this.state.data)?<Table data={this.state.data} inputs={this.input_arr}/>:""}
                           </div>
                         </div>
                       </div>
