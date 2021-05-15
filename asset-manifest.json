@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nutrition-analysis-edamam/static/css/main.a0f1ddfb.chunk.css",
-    "main.js": "/nutrition-analysis-edamam/static/js/main.c486fb4e.chunk.js",
-    "main.js.map": "/nutrition-analysis-edamam/static/js/main.c486fb4e.chunk.js.map",
+    "main.js": "/nutrition-analysis-edamam/static/js/main.49bc3e7c.chunk.js",
+    "main.js.map": "/nutrition-analysis-edamam/static/js/main.49bc3e7c.chunk.js.map",
     "runtime-main.js": "/nutrition-analysis-edamam/static/js/runtime-main.802cf0f9.js",
     "runtime-main.js.map": "/nutrition-analysis-edamam/static/js/runtime-main.802cf0f9.js.map",
     "static/js/2.06d7f71a.chunk.js": "/nutrition-analysis-edamam/static/js/2.06d7f71a.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.802cf0f9.js",
     "static/js/2.06d7f71a.chunk.js",
     "static/css/main.a0f1ddfb.chunk.css",
-    "static/js/main.c486fb4e.chunk.js"
+    "static/js/main.49bc3e7c.chunk.js"
   ]
 }
