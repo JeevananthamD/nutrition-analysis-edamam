@@ -1,4 +1,5 @@
 import React from "react";
+import Tbody from "./Tbody";
 
 const Table = ({data, inputs}) => {
     let s_no = 0;
@@ -16,15 +17,8 @@ const Table = ({data, inputs}) => {
                 {   
                     data.map((item, i) => {
                         if(!item.error) {
-                            {s_no++;}
-                            return(
-                                <tr>
-                                    <th>{s_no}</th>
-                                    <td>{inputs[i]}</td>
-                                    <td>{Math.round(item.calories)} kcal</td>
-                                    <td>{item.totalWeight.toFixed(1)} g</td>
-                                </tr>
-                            )
+                            s_no++;
+                            return <Tbody s_no={s_no} item={item} i={i} key={i} inputs={inputs}/>;
                         }
                     })
                 }                
